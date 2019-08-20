@@ -1,6 +1,6 @@
 ## This is some C++ examples
 
-##### The first example is linux memory leak example.
+##### The first example is valgrind_liinux_memory_leak. It is linux memory leak example.
 
 In this project, those functions have some problems about memory leak, we can use `valgrind` to check those memory leak.
 
