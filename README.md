@@ -16,3 +16,16 @@ In this project, it shows up rule of five and when will those functions(copy/mov
 It is install and run steps: 
 1. Type ``make`` to build this project
 2. Type ``./rule_of_five.out``, it will show up copy/move constructure/assignment be called time.
+
+
+##### The third example is makefile.
+In this project, it shows up how to use make to buid a project and generate test execution file
+
+> __NOTE__: 
+In this example, it use google test. So make sure your computer installed google test.
+
+The run steps is simple:
+1. Type ``make`` to build the project, it will generate a execution file and a test execution file
+2. Type ``./main.out`` will execute the file; type ``./test.out`` will execute test file
+3. You can go to test folder and type ``make`` to build test file alnoe, and type ``./test.out`` t orun test
+4. Threr is a file ``use_gcc_build_cmd``, copy this file line and paste on terminal, it will build test execute file.
