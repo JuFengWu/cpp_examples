@@ -25,7 +25,7 @@ In this project, it shows up how to use make to buid a project and generate test
 > __NOTE__: 
 In this example, it use google test. So make sure your computer installed google test.
 
-The run steps are simple:
+The running steps are simple:
 1. Type ``make`` to build the project, it will generate a execution file and a test execution file
 2. Type ``./main.out`` will execute the file; type ``./test.out`` will execute test file
 3. You can go to test folder and type ``make`` to build test file alnoe, and type ``./test.out`` t orun test
@@ -35,7 +35,15 @@ The run steps are simple:
 In this project, it shows up how to use shared memory in linux.
 
 
-The run steps are simple:
-1. Go test_shared_memory and type ``make`` . It will generate two file which are client.out and server.out
+The running steps are simple:
+1. Go to test_shared_memory and type ``make`` . It will generate two file which are client.out and server.out
 2. Type ``./server.out``, it will ask you to write something in share memory.
 3. Type ``./client.out``, it will show up the server message which write in shared memory
+
+#### The fifth example is smart pointer
+In this project, it demostrate how to use smart pointer and when will memeory free
+
+The running steps are:
+1. Go to smart_pointer folder and type ``make``. It will generate two file which are unique_ptr.out and shared_ptr.out
+2. Type ``./unique_ptr.out``, it will show up the unique_ptr demostration.
+2. Type ``./shared_ptr.out``, it will show up the shared_ptr demostration.
