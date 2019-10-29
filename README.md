@@ -40,7 +40,7 @@ The running steps are simple:
 2. Type ``./server.out``, it will ask you to write something in share memory.
 3. Type ``./client.out``, it will show up the server message which write in shared memory
 
-#### The fifth example is smart pointer
+### The fifth example is smart pointer
 In this project, it demostrate how to use smart pointer and when will memeory free
 
 The running steps are:
