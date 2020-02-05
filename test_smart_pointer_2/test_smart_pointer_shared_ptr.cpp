@@ -54,7 +54,7 @@ void test2_function(std::shared_ptr<DemoSharedPtr> &ptr){
 
 void test2(){
   std::cout<<"--- begin test2---"<<std::endl;
-  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(20);
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(20);
   test2_function(demoSharedPtr);
   std::cout<<"outside function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
 }
@@ -66,7 +66,7 @@ void test3_function(std::shared_ptr<Base> sharedPtr){
 
 void test3(){
   std::cout<<"---begin test3(polymorphism)---"<<std::endl;
-  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(20);
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(20);
   test3_function(demoSharedPtr);
   std::cout<<"outside function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
 }
@@ -78,7 +78,7 @@ void test4_function(std::shared_ptr<Base> &sharedPtr){
 
 void test4(){
   std::cout<<"---begin test4(polymorphism)---"<<std::endl;
-  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(20);
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(20);
   //test4_function(demoSharedPtr);
   //std::cout<<"outside function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
   //polymorphism can not be reference , it will have error
@@ -91,7 +91,7 @@ void test5_function(DemoSharedPtr& obj){
 
 void test5(){
   std::cout<<"---begin test5(the best way to pass, the compatibility is best)---"<<std::endl;
-  std::unique_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(20);
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(20);
   test5_function(*demoSharedPtr);
   test5_function(*demoSharedPtr.get());// this is the same as up
   std::cout<<"outside function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
@@ -106,16 +106,16 @@ void test6_function(DemoSharedPtr* sharedPtr){
 }
 
 void test6(){
-  std::cout<<"---begin test5(also the good way, the compatibility is also good)---"<<std::endl;
-  std::unique_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(20);
+  std::cout<<"---begin test6(also the good way, the compatibility is also good)---"<<std::endl;
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(20);
   test6_function(demoSharedPtr.get());
   std::cout<<"outside function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
 }
 
 void test7(){
-  std::cout<<"---begin test6(the other ways to create smart pointer)---"<<std::endl;
+  std::cout<<"---begin test7(the other ways to create smart pointer)---"<<std::endl;
   DemoSharedPtr test(123);
-  std::unique_ptr<DemoSharedPtr> demoSharedPtr = std::make_unique<DemoSharedPtr>(test);
+  std::shared_ptr<DemoSharedPtr> demoSharedPtr = std::make_shared<DemoSharedPtr>(test);
   std::cout<<"function the ptr value is "<<demoSharedPtr->get_input_var()<<std::endl;
 }
 
